@@ -1,0 +1,190 @@
+/* a largura da tela da pagina'sobre' está sendo especificada no arquivo style.css */
+
+:root {
+
+    --bg-claro: #012ffae5;
+    --bg-escuro: #0e34b1;
+
+
+}
+
+
+.sobre-header {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.sobre-titulo {
+    font-size: 2.5rem;
+    color: var(--bg-claro);
+    letter-spacing: -4px;
+    margin: 0;
+    animation: fadeInDown 3s ease;
+}
+
+
+
+.sobre-foto {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    animation: fadeInDown 5s ease;
+}
+
+.sobre-texto p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--bg-claro);
+    line-height: 1.2;
+    text-align: left;
+
+}
+
+.sobre-flex {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha pelo topo */
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.sobre-texto {
+    flex: 1 1 0;
+    display: block;
+    max-width: 500px;
+    margin-top: 3%;
+
+}
+
+.name-comapny {
+    color: var(--bg-escuro);
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.sobre-imagem {
+    flex: 0 0 auto;
+    display: block;
+    margin-right: -25%;
+    margin-top: -190px;
+    z-index: -1;
+
+}
+
+.sobre-foto-destaque {
+    width: 100%;
+    max-width: 900px;
+    height: 1200px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: fadeInDown 5s ease;
+
+}
+
+section {
+    position: relative;
+    z-index: -1;
+    background-position: center;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('./assets/fundo_marcdgua.png');
+    background-size: 95%;
+    background-position: center;
+    opacity: 0.4;
+    /* ajuste conforme necessário */
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+
+
+
+@media (max-width: 998px) {
+
+
+
+    section {
+
+        background-size: 100%;
+        z-index: -1;
+
+
+    }
+
+    section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('./assets/fundo_marcdgua.png');
+        background-size: 95%;
+        background-position: center;
+        opacity: 0.4;
+        /* ajuste conforme necessário */
+        pointer-events: none;
+        z-index: -1;
+    }
+
+
+    .sobre-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .sobre-imagem {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        margin-top: 0;
+        z-index: initial;
+        margin-right: 0;
+
+    }
+
+    .sobre-texto {
+        order: 2;
+        margin-top: 0;
+        max-width: 100%;
+    }
+
+    .sobre-texto p {
+        max-width: 800px;
+        margin: 0 auto;
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.1rem;
+        color: var(--bg-claro);
+        line-height: 1.2;
+        text-align: left;
+
+    }
+
+    .sobre-foto-destaque {
+        max-width: 100%;
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+        border-radius: 50%;
+
+    }
+
+    .sobre-titulo {
+        margin-left: 6%;
+    }
+}
+
+
+
+

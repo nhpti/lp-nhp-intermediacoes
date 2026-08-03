@@ -1,0 +1,260 @@
+:root{
+  
+  --bg-claro: #012ffae5;
+  --bg-escuro: #0e34b1;
+   
+  
+}
+
+.servicos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* sem espaço entre os itens */
+  width: 100%;
+  align-items: center;
+  padding: 20px 0;
+  justify-content: center;
+  
+}
+
+.servico-item {
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 32px 24px;
+  width: 85%;
+  height: 300px;
+  border-radius: 8px;
+  
+}
+
+/* .servico-item:hover{
+      background-image: url('./assets/hero-mobi.png') ;
+      background-size: cover ;
+      background-position: center;
+} */
+
+
+.servico-texto {
+  flex: 1;
+  text-align: left;
+  width: 100%;
+  margin-left: 45px;
+}
+
+.servico-titulo {
+  font-size: 4.3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  
+}
+
+.servico-subtitulo {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.bg-claro {
+  background-color: var(--bg-claro);
+  
+  
+}
+
+.bg-escuro {
+  background-color: var(--bg-escuro);
+  
+}
+
+.servicos-header {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 32px 0 16px 0;
+    padding: 0 24px;
+    margin-bottom: 4%;
+    animation: fadeInDown 3s ease;
+}
+
+.servicos-titulo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.btn-servicos {
+    background: white;
+    color: var(--bg-claro);
+    padding: 12px 28px;
+    border: 1px solid var(--bg-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-servicos:hover {
+    background: var(--bg-claro);
+    color: white;
+}
+
+
+
+@media (min-width: 993px) {
+  .servico-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 353px;
+    padding: 0;
+  }
+
+
+
+  .servico-item::before {
+    content: "";
+    position: absolute;
+    right: 0; /* Muda da esquerda para a direita */
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 8px 8px 0; /* borda arredondada na direita */
+  }
+
+  /* Define as imagens específicas */
+  .servico-item:nth-child(2)::before {
+    background-image: url('assets/fgts-pic.png');
+  }
+
+  .servico-item:nth-child(3)::before {
+    background-image: url('assets/bolsa-familia-pic.png');
+  }
+
+  .servico-item:nth-child(4)::before {
+    background-image: url('assets/clt-pic.png');
+  }
+
+  .servico-item:nth-child(5)::before {
+    background-image: url('assets/quitapay-pic.png');
+  }
+
+ 
+
+  .servico-texto {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding: 10%;
+    color: white;
+  }
+}
+
+
+
+
+@media (max-width: 992px) {
+  .servico-item {
+    position: relative;
+    display: flex;
+    flex-direction: row; /* lado a lado */
+    align-items: center;
+    height: 250px; /* ajuste conforme necessário */
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .servico-item::before {
+    content: "";
+    position: absolute;
+    right: 0; /* imagem na direita */
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+   
+  }
+
+  .servico-item:hover::before {
+
+    width: 100%;
+ 
+
+  }
+
+  .servico-item:nth-child(2)::before {
+    background-image: url('assets/fgts-pic.png');
+  }
+
+  .servico-item:nth-child(3)::before {
+    background-image: url('assets/mobile/bolsa-familia-pic.png');
+  }
+
+  .servico-item:nth-child(4)::before {
+    background-image: url('assets/clt-pic.png');
+  }
+
+  .servico-item:nth-child(5)::before {
+    background-image: url('assets/mobile/quintapay-pic-mob.png');
+  }
+
+
+  /* TOP SEÇÃO E BTN */
+.servicos-header {
+    display: flex;
+    width: 80%;
+    justify-content: column;
+    margin: 32px 0 16px 0;
+    padding: 0 24px;
+    margin-bottom: 4%;
+}
+
+.servicos-titulo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.top{
+  display: none;
+}
+
+.btn-servicos {
+    background: white;
+    color: var(--bg-claro);
+    padding: 12px 18px;
+    border: 1px solid var(--bg-claro);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+
+
+  .servico-texto {
+    position: relative;
+    
+    width: 45%;
+    padding: 0;
+    color: #fff;
+    
+  }
+
+  .servico-texto p{
+    font-size: medium;
+    
+  }
+
+  .servico-texto h1{
+    font-size: x-large;
+    
+  }
+}

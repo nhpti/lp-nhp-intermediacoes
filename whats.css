@@ -1,0 +1,136 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Botão WhatsApp - original */
+#whatsapp-button {
+  position: fixed;
+  bottom: 38px;
+  right: 38px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Badge de notificação */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orbit container: anel do texto */
+#whatsapp-orbit {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 1001;
+  /* Centraliza orbit no botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#orbit-text {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  animation: orbit-rotate 3s linear infinite;
+}
+
+#orbit-text span {
+  font-size: 14px;
+  color: rgb(18, 1, 250);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 4px #fff, 0 0 2px #25d366;
+  transition: color 0.2s;
+  user-select: none;
+  opacity: 0.8;
+  /* Não permite seleção do texto */
+}
+
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+
+/* Dialog WhatsApp - original */
+#whatsapp-dialog {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: white;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 2000;
+  animation: slideUp 0.3s ease;
+}
+
+#whatsapp-dialog .header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+#whatsapp-dialog .header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#whatsapp-dialog .options {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+#whatsapp-dialog .options a {
+  text-decoration: none;
+  background: #25d366;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+#whatsapp-dialog .options a:hover {
+  background: #1ebc5a;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
